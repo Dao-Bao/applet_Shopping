@@ -1,0 +1,37 @@
+.body {width: 96%;height: 250rpx;margin: 0 auto;background-color: #5ebed6;position: relative;}
+.body-nav {width: 90%;margin: 0 auto;border-radius: 20rpx 20rpx 0 0;background-color: #ffffff;position: absolute;top: 40%;bottom: 0;left: 0;right: 0;}
+.body-navall {display: flex;text-align: center;}
+.container {width: 100%;min-height: 100%;display: flex;flex-direction: column;box-sizing: border-box;}
+.section {display: flex;flex-direction: column;padding-left: 30rpx;padding-right: 30rpx;margin-bottom: 30rpx;}
+.section-good {margin-bottom: 100rpx;}
+.good {display: flex;flex-direction: row;align-items: center;position: relative;height: 250rpx;border-bottom: 1px solid #ccc;}
+.good:last-child {border-bottom: none;}
+/*checkbox 整体大小  */
+checkbox {margin: 0;padding: 0;width: 48rpx;height: 48rpx;box-sizing: border-box;}
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{border-radius: 50%;/* 圆角 */width: 48rpx; /* 背景的宽 */height: 48rpx; /* 背景的高 */box-sizing: border-box;margin-right: 16rpx;}
+/* 选中后的 背景样式 */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{border: none;background: #5ebed6;}
+/* 选中后的 对勾样式*/
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{border-radius: 50%;/* 圆角 */width: 48rpx;/* 选中后对勾大小 */height: 48rpx;/* 选中后对勾大小 */line-height: 48rpx;text-align: center;font-size:30rpx; /* 对勾大小 */color:#ffffff; /* 对勾颜色*/background: transparent;transform:translate(-50%, -50%) scale(1);-webkit-transform:translate(-50%, -50%) scale(1);}
+.cover {width: 200rpx;height: 180rpx;margin-left: 20rpx;}
+.content {flex: 1;margin-left: 20rpx;width: 120rpx;text-align: left;}
+.content .name {color: #333;font-size: 36rpx;}
+.content .desc {color: #aaaaaa;font-size: 28rpx;margin-top: 10rpx;}
+.pas {display: flex;}
+.content .price {font-size: 36rpx;color: #e4452a;margin-top: 30rpx;}
+.good .stepper {display: flex;position: absolute;right: 0;bottom: 30rpx;flex-direction: row;text-align: center;}
+.stepper .add, .stepper .subtract {width: 60rpx;height: 55rpx;line-height: 55rpx;font-size: 28rpx;border: 1px solid #ccc;box-sizing: border-box;}
+.stepper .disabled {color: #eee;}
+.stepper .count {width: 60rpx;height: 55rpx;line-height: 55rpx;border: 1px solid #ccc;text-align: center;box-sizing: border-box;min-height: 1rem;font-size: 28rpx;}
+.section-bottom {display: flex;flex-direction: row;align-items: center;width: 100%;height: 100rpx;position: fixed;bottom: 0;left: 0;margin-bottom: 0;background-color: #fff;box-sizing: border-box;z-index: 99;}
+.section-bottom .btn {width: 160rpx;height: 100rpx;line-height: 100rpx;text-align: center;color: #fdfffd;background-color: #5ebed6;}
+.section-bottom .btn-default {color: #363636;background-color: #eee;}
+.section-bottom .btn-primary {color: #fdfffd;background-color: #5ebed6;}
+.section-bottom .checkbox-allcheck {display: inline-block;margin-left: 30rpx;vertical-align: top;font-size: 0px;}
+.section-bottom .check-all-text {display: inline-block;vertical-align: top;margin-left: 10rpx;height: 23px;line-height: 23px;font-size: 28rpx;}
+.section-bottom .total {flex: 1;text-align: center;font-size: 26rpx;}
+.total .totalCount {font-size: 26rpx;display: inline-block;vertical-align: middle;}
+.total .totalPrice {display: inline-block;font-size: 26rpx;margin-left: 20rpx;vertical-align: middle;}
+.total .totalCount text {color: #e4452a;vertical-align: middle;}
+.total .totalPrice text {color: #e4452a;font-size: 36rpx;vertical-align: middle;}

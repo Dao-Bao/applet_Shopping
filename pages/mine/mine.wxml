@@ -1,0 +1,49 @@
+<view class="all">
+  <!-- 上 -->
+  <view class="up">
+    <view class="head">
+      <view class="body">
+        <!-- 背景+信息 -->
+        <view class="body-head">
+          <view class="body-headmsg">
+            <view class="body-headbody">
+              <image class="body-headbodyimg" src="{{head.src}}"></image>
+              <view class="body-headbodyspan">
+                <view class="body-headbodyname">{{head.name}}</view>
+                <view class="body-headbodyspanf">
+                  <view class="body-headbodyscoll">积分：{{head.scoll}}</view>
+                  <view class="body-headbodydetail"><span class="body-headbodydetailf">查看积分明细</span>></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- nav -->
+        <view class="body-nav">
+          <view class="body-navall">
+            <view class="body-navbody" wx:for="{{nav}}" wx:key="nav">
+              <image class="body-navbodyimg" src="{{item.src}}"></image>
+              <view class="body-navbodydesc">{{item.desc}}</view>
+            </view>  
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下 -->
+  <view class="down">
+    <view class="iconall">
+      <view class="weui-cell weui-cell_active weui-cell_access"  wx:for="{{icon}}" wx:key="icon">
+        <view class="weui-cell__bd">
+          <view class="icon">
+            <image class="iconimg" src="{{item.src}}"></image>
+            <text style="vertical-align: middle;">{{item.desc}}</text>
+          </view>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+  </view>
+
+</view>

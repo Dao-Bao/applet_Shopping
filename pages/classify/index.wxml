@@ -1,0 +1,62 @@
+<view class="all">
+  <!-- 轮播 -->
+  <view class='swipercontent'>
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" circular="{{true}}">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 点击选择定位 -->
+  <view class="contents" bindtap="handleAddressClick">
+    <image class="choosemapimg" src="https://s1.ax1x.com/2020/07/06/UCtg8f.png"></image>
+    <view class="choosemapspan">
+      {{ address }}
+    </view>
+  </view>
+
+  <!-- 滚动 -->
+  <view class="cotent">
+    <!-- 左侧tab菜单栏 -->
+    <scroll-view class="leftTabBox clearFix" scroll-with-animation="true" scroll-y="true" style="height:100%vh">
+      <block wx:for="{{leftClassesMenuList}}" wx:key="{{item.id}}">
+        <button formType="submit" class="{{selectedLeftMenuItem == item.id?'leftTab-selectedItem':'leftTab-items'}}" bindtap="{{selectedLeftMenuItem == item.id?'':'selectClassesClick'}}" data-index="{{index}}" data-id="{{item.id}}">
+          <view class="leftTab-nameBox">{{item.name}}</view>
+        </button>
+      </block>
+    </scroll-view>
+    <!-- 右侧商品列表 -->
+    <scroll-view class="bigWrap productList clearFix" scroll-with-animation="true" enable-back-to-top="true" scroll-y="true" scroll-top="{{scrollTop}}" style="height:100%" bindscrolltolower="loadMore" scroll-into-view="{{toView}}" scroll-with-animation="true" bindscroll="scrollProductList">
+      <view wx:for="{{productList}}" id="{{'productItem'+item.cateId}}" wx:key="{{index}}">
+        <view class="classesTitle">{{item.cateName}}</view>
+        <block wx:for="{{item.goodsList}}" wx:key="{{goodsItem.goodsId}}" wx:for-item="goodsItem">
+          <view class="product-item clearFix" data-item="{{goodsItem}}" bindtap='showGoodsDetail'> 
+            <image class="product-image" src="{{goodsItem.goodsImgUrl}}" mode="aspectFit" /> 
+            <view class="product-content">
+              <view class="product-title">{{goodsItem.goodsName}}</view>
+              <view class="product-specifiate">{{goodsItem.goodsSpecifiate}}</view>
+              <view class="product-messageBox">
+                <text class="product-sellmessage">已售{{goodsItem.goodsSellmessage}}份</text>
+                <text class="product-purplusmessage">剩余{{goodsItem.goodsSurplusMessage}}份</text>
+              </view>
+              <view class="product-price">
+                <view class="price">￥{{goodsItem.goodsPayprice}}</view>
+                <!-- 选择商品数量 -->
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view wx:if="{{noMoreTag == true}}" class='loadMore'>暂无更多数据</view>
+    </scroll-view>
+  </view>
+</view>

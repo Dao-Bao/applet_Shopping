@@ -1,0 +1,98 @@
+.all {
+  overflow: hidden;
+  height: 100%vh;
+}
+/* 上 */
+.up {
+  height: 400rpx;
+  background-color: #e5e5e5;
+}
+.head {
+  height: 380rpx;
+  background-color: #ffffff;
+}
+.body {
+  width: 96%;
+  height: 250rpx;
+  margin: 0 auto;
+  background-color: #5ebed6;
+}
+.body-head {
+  width: 85%;
+  margin: 0 auto;
+}
+.body-headmsg {
+  margin: 0 auto;
+  padding-top: 5%;
+}
+.body-headbody {
+  margin: 0rpx auto 5% auto;
+  display: flex;
+}
+.body-headbodyimg {
+  width: 17%;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 3%;
+}
+.body-headbodyspan {
+  color: #ffffff;
+}
+.body-headbodyname {
+  margin-top: 5%;
+}
+.body-headbodyspanf {
+  width: 400rpx;
+  display: flex;
+  font-size: 30rpx;
+  margin-top: 3%;
+}
+.body-headbodydetail {
+  margin-left: 8%;
+}
+.body-headbodydetailf {
+  color: yellow;
+}
+.body-nav {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  background-color: #ffffff;
+}
+.body-navall {
+  display: flex;
+  text-align: center;
+}
+.body-navbody {
+  width: 15%;
+  margin: 0 auto;
+}
+.body-navbodyimg {
+  width: 50%;
+  height: 60rpx;
+  margin-top: 15%;
+}
+.body-navbodydesc {
+  font-size: 25rpx;
+}
+/* 下 */
+.down {
+  width: 96%;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+.iconall {
+}
+.weui-cell {
+  padding: 25rpx;
+}
+.icon {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  font-size: 30rpx;
+}
+.iconimg {
+  width:8%;
+  height: 50rpx;
+}

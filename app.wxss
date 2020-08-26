@@ -1,0 +1,81 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+@import "weui.wxss";
+
+page {
+  font-size: 12px;
+  height: 100%;
+  color: #46414d;
+}
+
+view,text,button,scroll-view{
+  box-sizing: border-box;
+}
+button {
+  border: 0;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+button::before, button::after {
+  border: 0;
+}
+
+.flex_Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+placeholder-class {
+  z-index: 1;
+}
+
+.contactBtn, contact-button {
+  position: fixed;
+  bottom: 107px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  z-index: 999999;
+}
+.contactBtn {
+  background-image: url(http://static.cakeboss.com.cn/wx-tian-%E5%BE%AE%E4%BF%A1%E5%AE%A2%E6%9C%8D.svg);
+}
+
+contact-button {
+  opacity: 0;
+}
+
+.floatl {
+  float: left;
+}
+
+.floatr {
+  float: right;
+  text-align: right;
+}
+
+.textAlignC {
+  text-align: center;
+}
+
+.clearFix {
+  clear: both;
+}
+
+.clearFix:after {
+  display: block;
+  clear: both;
+  content: "";
+}

@@ -1,0 +1,95 @@
+<view class="all">
+
+  <!-- 搜索框 -->
+  <view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+    <form class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <i class="weui-icon-search"></i>
+          <input type="text" class="weui-search-bar__input" placeholder="夏季蚊虫叮咬护理常识" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+      </view>
+      <label class="weui-search-bar__label" bindtap="showInput">
+        <i class="weui-icon-search"></i>
+        <span class="weui-search-bar__text">夏季蚊虫叮咬护理常识</span>
+      </label>
+    </form>
+    <!-- <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view> -->
+  </view>
+
+  <!-- 轮播 -->
+  <view class="wrap">
+    <swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" bindchange="swiperChange" circular="{{circular}}">
+      <block wx:for="{{background}}" wx:key="background">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!--重置小圆点的样式  -->
+    <view class="dots">
+      <block wx:for="{{background}}" wx:key="background">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>  
+  </view>
+
+  <!-- 图标 -->
+  <view class="icon">
+    <view class="icon-body">
+      <view class="icon-bodyone" wx:for="{{icon}}" wx:key="icon">
+        <image class="icon-img" src="{{item.src}}"></image>
+        <span class="icon-span">{{item.desc}}</span>
+      </view>
+    </view>
+  </view>
+
+  <!-- 超好用的推荐 -->
+  <view class="recommend">
+    <view class="weui-article__h1">超好用的推荐</view>
+    <view class="recommend-body">
+      <view class="recommend-bodyone" wx:for="{{recommend}}" wx:key="recommed">
+        <view class="recommend-span">人气推荐</view>
+        <image class="recommend-img" src="{{item}}"></image>
+      </view>
+    </view>
+    <view class="recommend-bodys" hover-class="none" hover-stop-propagation="false">
+      <view class="recommend-bodytwo" wx:for="{{recommendtwo}}" wx:key="recommendtwo">
+        <image class="recommend-imgtwo" src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- TOP推荐 -->
+  <view class="toprecommend">
+    <view class="weui-article__h1 top">TOP推荐</view>
+    <view class="toprecommend-body">
+      <view class="toprecommend-bodyone" wx:for="{{toprecommend}}" wx:key="toprecommend">
+        <image class="toprecommend-src" src="{{item.src}}"></image>
+        <view class="toprecommend-desc">{{item.desc}}</view>
+        <view class="toprecommend-bodytwo">
+          <view class="toprecommend-bodytwoleft">
+            <view class="toprecommend-price">￥{{item.price}}</view>
+            <view class="toprecommend-sell">销量: {{item.sell}}</view>
+          </view>
+          <view class="toprecommend-bodytworight">
+            <view class="button-sp-area">
+              <a class="weui-btn weui-btn_mini">购买</a>
+            </view>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+
+  <!-- 专区 -->
+  <view class="special">
+    <view class="special-body">
+      <view class="special-bodyone" wx:for="{{special}}" wx:key="special">
+        <image class="special-img" src="{{item.src}}"></image>
+        <view class="special-span">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>

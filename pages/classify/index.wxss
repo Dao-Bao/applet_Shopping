@@ -1,0 +1,49 @@
+.all {overflow: hidden;}
+/* 轮播 */
+.swipercontent {position: relative;}
+swiper{width: 100%;height:400rpx;}
+swiper image {display: block;width: 100%;height: 400rpx;}
+.dots{position: absolute;left: 0;right: 0;bottom: 20rpx;display: flex;justify-content: center;}
+.dot{margin: 0 8rpx;width: 14rpx;height: 14rpx;background: #fff;border-radius: 8rpx;transition: all .6s;}
+.dot.active{width: 24rpx;background: #5ebed6;}
+
+/* 点击选择定位 */
+.contents {width: 100%;height: 100rpx;margin: 0 auto;display: flex;}
+.choosemapimg {width: 10%;height: 80rpx;margin-top: 2%;}
+.choosemapspan {font-size: 30rpx;margin: auto 0 auto;}
+
+/* 滚动 */
+.cotent {position: fixed;height: 100%vh;top: 500rpx;left: 0;bottom: 0rpx;right: 0;}
+.leftTabBox {width: 160rpx;position: absolute;height: 100%;background: #f7f7f7;text-align: center;}
+.leftTabBox button {height: 80rpx !important;line-height: 60rpx !important;position: relative;width:auto !important;padding: 0 !important;border-radius: 0 !important;margin-top: 10%;font-size: 30rpx;}
+.leftTabBox button::after{border: none;}
+.productList {width: calc(100% - 160rpx);position: absolute;right: 0;bottom: 0;top: 0;}
+.productList view:last-child .product-item:last-child{padding-bottom: 100rpx;}
+.locationBox {margin: 10rpx 0 0 20rpx; background-color: #fff;color: #46414d;text-align: center;padding: 0 20rpx;line-height: 35rpx;border-radius: 18rpx;display: inline-block;}
+.locationText {margin-right: 8rpx;font-size: 25rpx;font-weight: bold;}
+.classesTitle {font-size: 30rpx;border-bottom: 1rpx solid #f4f4f4;padding-left: 20rpx;line-height: 60rpx;display: block;}
+.couponBox {width: 750rpx;background-repeat: no-repeat;background-image: url(http://static.cakeboss.com.cn/wx-tian-couponBanner-02.png);height: 108rpx;background-size: 100% 100%;background-position: 0 0;position: relative;bottom: 5rpx;}
+.coupon-leftTopTitle {position: absolute;left: 220rpx;top: 10rpx;font-size: 36rpx;}
+.coupon-rightBottomTitle {position: absolute;right: 180rpx;top: 54rpx;font-size: 36rpx;}
+.coupon-item {float: left;width: calc((100% - 2rpx) / 3);height: 50rpx;color: #ede4c7;font-size: 10rpx;position: relative;}
+.coupon-detailTag {position: absolute;right: 18%;display: block;top: calc(50% - 3.5px);height: 0;width: 0;border-top: 7rpx solid #ede4c7;border-left: 7rpx solid transparent;transform: rotate(45deg);-ms-transform: rotate(45deg);-moz-transform: rotate(45deg);-webkit-transform: rotate(45deg);-o-transform: rotate(45deg);}
+.couponText {font-size: 16rpx;font-weight: bold;line-height: 25rpx;}
+.couponNumText {font-size: 25rpx;font-weight: bold;line-height: 25rpx;}
+.coupon-priceBox {margin-top: 5rpx;}
+.couponSeparateLine {float: left;margin: 15rpx 0;height: 20rpx;border-right: 1rpx solid #ede4c7;}
+button::after {content: none !important;box-sizing: border-box;border-radius: 0;border-color: transparent;width: 0;height: 0;}
+.leftTab-selectedItem {background: #f4f4f4;border-left: 15rpx solid #5ebed6; color: #5ebed6;}
+.leftTab-selectedItem::before {content: "";display: block;width: 60rpx;height: 25rpx;background-image: url('https://n1-1256832886.cos.ap-shanghai.myqcloud.com/content/customer_home/shop_car/car.png');background-repeat: no-repeat;background-size: 100%;margin: 0 auto;}
+.leftTab-nameBox {width: 100%;font-size: 30rpx;}
+.product-item {width: 100%;padding: 20rpx 0 20rpx 20rpx;border-bottom: 1rpx solid #f4f4f4;}
+.productList view:last-child .product-item:last-child {padding-bottom: 0rpx;}
+.product-image {width: 200rpx;float: left;height: 200rpx;}
+.product-content {width: calc(100% - 240rpx);margin:10px 20rpx 0 20rpx;border-radius: 2rpx;float: right;}
+.product-title {width: 100%;line-height: 40rpx;font-size: 35rpx;font-weight: 600;}
+.product-specifiate {font-size: 25rpx;color: #aaaaaa;padding: 10rpx;}
+.product-messageBox {font-size: 30rpx;padding: 10rpx;}
+.product-sellmessage {border: 1rpx #5ebed6 solid;}
+.product-purplusmessage {text-align: center;color: #ffffff;background-color: #5ebed6;padding-left: 10rpx;border: 1rpx #5ebed6 solid;}
+.product-price {display: flex;}
+.price {font-size: 40rpx;color: red;}
+

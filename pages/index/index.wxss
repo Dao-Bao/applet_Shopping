@@ -1,0 +1,56 @@
+.all {overflow: hidden;}
+/* 搜索框 */
+#searchBar {background-color: #ffffff;}
+.searchbar-result{margin-top:0;font-size:14px}
+.searchbar-result .weui-cell__bd{padding:2px 0 2px 20px;color:var(--weui-FG-1)}
+.searchbar-result:before{display:none}
+.weui-search-bar__form{border-radius: 50rpx;box-shadow: 5rpx 5rpx 10rpx rgba(192, 192, 192, 0.5);}
+.weui-search-bar__box{border-radius: 20rpx;}
+.weui-search-bar__input{border: 1rpx #aaaaaa solid;border-radius: 20rpx;}
+.weui-search-bar__label{border: 1rpx #aaaaaa solid;border-radius: 50rpx;}
+/* 轮播 */
+.wrap{width: 95%;height: 100%;margin: 0 auto;position: relative;}
+.swipers {height: 200rpx;width: 100%;border-radius: 20rpx;}
+.slide-image {width: 100%;height: 200rpx;display: block;border-radius: 20rpx;}
+/*包裹所有的小圆点  */
+.dots{width: 30%;height: 36rpx; display: flex;justify-content: center;flex-direction: row;position: absolute;left: 50%;bottom: -50rpx;transform: translateX(-50%);}
+/*未选中时的小圆点样式 */
+.dot{width: 15rpx;height: 15rpx;border-radius: 50%;margin-left: 10rpx;background-color: #aaaaaa;}
+/*选中以后的小圆点样式  */
+.active{width: 20rpx;height: 10rpx;border:2rpx #5ebed6 solid;border-radius: 10rpx;background-color: #5ebed6;}
+
+/* 图标 */
+.icon {width: 95%;margin: 0 auto;padding: 20rpx;}
+.icon-body {width: 100%;display: flex;flex-wrap:wrap;margin-top: 20rpx;}
+.icon-bodyone {width: 20%;text-align: center;margin-top: 20rpx;}
+.icon-img {width: 50%;height: 50%;}
+.icon-span {font-size: 30rpx;display: block;}
+/* 超好用的推荐 */
+.recommend {width: 95%;margin: 0 auto;padding-top: 20rpx;}
+.weui-article__h1 {margin-bottom: 0;}
+.recommend-body {width: 100%;display: flex;justify-content: center;margin-top: 30rpx;}
+.recommend-bodyone {width: 50%;display: block;}
+.recommend-span {width: 17%;background: rgb(233, 92, 56);color: #ffffff;font-size: 28rpx;border-top-left-radius: 30rpx;border-bottom-right-radius: 30rpx;position: absolute;margin-left: 10rpx;padding: 0;}
+.recommend-img {width: 95%;height: 250rpx;border-radius: 45rpx;padding-left: 10rpx;padding-right: 10rpx;}
+.recommend-bodys {width: 100%;display: flex;justify-content: center;}
+.recommend-bodytwo {width: 50%;text-align: center}
+.recommend-imgtwo {width: 96%;height: 250rpx;border-radius: 30rpx;}
+/* TOP推荐 */
+.toprecommend {width: 95%;margin: 0 auto;padding: 20rpx;}
+.toprecommend-body {width: 100%;display: flex;}
+.toprecommend-bodyone {width: 50%;margin-top: 20rpx;border: 1rpx #aaaaaa solid;margin-left: 10rpx;margin-right: 10rpx;border-radius: 10rpx;}
+.toprecommend-src {width:99%;height: 400rpx;border: 0.5rpx #aaaaaa solid;border-radius: 10rpx;}
+.toprecommend-desc {font-size: 35rpx;height: 100rpx;padding-left: 10rpx;padding-right: 10rpx;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.toprecommend-bodytwo {display: flex;padding-left: 10rpx;}
+.toprecommend-bodytwoleft {width:50%}
+.toprecommend-price {color: red;}
+.toprecommend-sell {font-size: 35rpx;color: #aaaaaa;}
+.toprecommend-bodytworight {width:50%;padding-bottom:20rpx}
+.button-sp-area{padding-top:15px;text-align:center}
+.weui-btn_mini{border: 2rpx #5ebed6 solid;color: #5ebed6;font-size: 35rpx;background-color: #ffffff;margin-right:4px;}
+/* 专区 */
+.special {width: 95%;margin: 0 auto;background-color: rgb(243, 243, 243);border-radius: 20rpx;}
+.special-body {width: 100%;display: flex;flex-wrap:wrap;}
+.special-bodyone {width: 50%;text-align:center;margin-top: 20rpx; position: relative; }
+.special-img {width: 95%;height: 300rpx;border: 2rpx #aaaaaa solid;box-shadow: 8rpx 8rpx 10rpx rgba(192, 192, 192, 0.5);margin-left: 10rpx;margin-right: 10rpx;margin-bottom: 10rpx;border-radius: 20rpx;}
+.special-span {width: 97%;height: 80rpx;line-height: 80rpx;font-size: 45rpx;display: block;position: absolute;background-color: rgba(255, 255, 255, 0.4);top: 50%;left: 51%;transform: translate(-50%, -50%);}
